@@ -48,6 +48,9 @@ public class Main {
         System.out.println("SemiTruck cargo capacity: " + bigRig.getCargoCapacity());
         System.out.println("Hovercraft fuel capacity: " + skySurfer.getFuelCapacity());
 
+        System.out.println(speedy.toString());
+        System.out.println(slowRide.toString());
+        System.out.println(bigRig.toString());
 
     }
 }
