@@ -5,6 +5,15 @@ public class Vehicle {
     private int cargoCapacity;
     private int fuelCapacity;
 
+    // Constructor
+    public Vehicle(String color, int numberOfPassengers, int cargoCapacity, int fuelCapacity) {
+        this.color = color;
+        this.numberOfPassengers = numberOfPassengers;
+        this.cargoCapacity = cargoCapacity;
+        this.fuelCapacity = fuelCapacity;
+    }
+
+
     // Getters and Setters
     public String getColor() { return color; }
     public void setColor(String color) { this.color = color; }
