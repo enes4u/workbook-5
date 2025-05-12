@@ -40,8 +40,11 @@ public class Main {
         SemiTruck bigRig = new SemiTruck("Black", 2, 10000, 150);
         Hovercraft skySurfer = new Hovercraft("White", 6, 500, 80);
 
+        System.out.println("Before update car number of passangers "+speedy.getNumberOfPassengers());
+        speedy.setNumberOfPassengers(8);
 
         System.out.println("Car fuel capacity: " + speedy.getFuelCapacity());
+        System.out.println( " After save (update) car number of passangers "+speedy.getNumberOfPassengers());
         System.out.println("SemiTruck cargo capacity: " + bigRig.getCargoCapacity());
         System.out.println("Hovercraft fuel capacity: " + skySurfer.getFuelCapacity());
 
