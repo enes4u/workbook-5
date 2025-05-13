@@ -1,12 +1,13 @@
 package com.pluralsight;
 public class Vehicle {
-    protected String color;
+
     protected int numberOfPassengers;
     protected int cargoCapacity;
     protected int fuelCapacity;
+    protected String color;
 
     // Constructor
-    public Vehicle(String color, int numberOfPassengers, int cargoCapacity, int fuelCapacity) {
+    public Vehicle( int numberOfPassengers, int cargoCapacity, int fuelCapacity , String color) {
         this.color = color;
         this.numberOfPassengers = numberOfPassengers;
         this.cargoCapacity = cargoCapacity;

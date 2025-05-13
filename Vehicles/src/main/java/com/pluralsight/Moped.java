@@ -1,18 +1,18 @@
 package com.pluralsight;
 
 public class Moped extends Vehicle {
-    @Override
-    public String toString() {
-        return "Moped { " +
-                "color='" + color + '\'' +
-                ", numberOfPassengers= " + numberOfPassengers +
-                ", cargoCapacity= " + cargoCapacity +
-                ", fuelCapacity= " + fuelCapacity +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Moped { " +
+//                "color='" + color + '\'' +
+//                ", numberOfPassengers= " + numberOfPassengers +
+//                ", cargoCapacity= " + cargoCapacity +
+//                ", fuelCapacity= " + fuelCapacity +
+//                '}';
+//    }
 
-    public Moped(String color, int numberOfPassengers, int cargoCapacity, int fuelCapacity) {
-        super(color, numberOfPassengers, cargoCapacity, fuelCapacity);
+    public Moped( int numberOfPassengers, int cargoCapacity, int fuelCapacity, String color) {
+        super(numberOfPassengers, cargoCapacity, fuelCapacity, color);
 
 
     }
