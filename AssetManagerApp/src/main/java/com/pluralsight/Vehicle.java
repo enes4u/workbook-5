@@ -17,7 +17,7 @@ public class Vehicle extends Asset {
     public String getMakeModel() { return makeModel; }
     public void setMakeModel(String makeModel) { this.makeModel = makeModel; }
 
-    public int getYear() { return year; }
+    public int getYear() { return this.year; }
     public void setYear(int year) { this.year = year; }
 
     public int getOdometer() { return odometer; }
@@ -26,7 +26,8 @@ public class Vehicle extends Asset {
     // Override getValue() method
     @Override
     public double getValue() {
-        int age = 2025 - year; // Assuming current year is 2025
+        int age = 2025 - year;// Assuming current year is 2025
+
         double value = getOriginalCost();
 
         if (age <= 3) {

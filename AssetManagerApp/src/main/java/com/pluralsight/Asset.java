@@ -22,6 +22,16 @@ public class Asset {
     public double getOriginalCost() { return originalCost; }
     public void setOriginalCost(double originalCost) { this.originalCost = originalCost; }
 
+    @Override
+    public String toString() {
+        return  "\n "+ getClass().getSimpleName() +"  Asset{    " +
+                "description=>" + description  + "    |" +
+                ", dateAcquired='" +"   |" +dateAcquired + '\'' + "    |"+
+                ", originalCost=    " + originalCost +
+                ", current value=   " + getValue() +
+                '}';
+    }
+
     // Method to get value (default behavior)
     public double getValue() {
         return originalCost;

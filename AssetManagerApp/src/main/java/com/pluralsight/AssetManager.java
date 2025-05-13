@@ -38,6 +38,8 @@ public class AssetManager {
 
             switch (choice) {
                 case "1":
+                    System.out.println(assets); // to String overwrite used
+
                     System.out.println("\nListing All Assets:");
                     for (Asset asset : assets) {
                         System.out.println("Description: " + asset.getDescription());
