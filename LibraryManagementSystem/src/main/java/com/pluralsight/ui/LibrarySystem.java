@@ -192,26 +192,73 @@ public class LibrarySystem {
 
     // PLACEHOLDER MAGAZINE MENU (Students will implement)
     private void magazineMenu() {
+        boolean inMagazineMenu = true;
         System.out.println("\n=== Magazine Menu ===");
         System.out.println("TODO: Magazine menu implementation");
         System.out.println("This menu should include:");
-        System.out.println("- View all magazines");
-        System.out.println("- View available magazines");
-        System.out.println("- Search magazines by title");
-        System.out.println("- Search magazines by publisher");
-        System.out.println("- Search magazines by genre");
-        System.out.println("- Borrow magazine");
-        System.out.println("- Return magazine");
-        System.out.println("- Show issue information");
-        System.out.println();
-        System.out.println("Press Enter to continue...");
+        System.out.println("1. View all magazines");
+        System.out.println("2. View available magazines");
+        System.out.println("3. Search magazines by title");
+        System.out.println("4. Search magazines by publisher");
+        System.out.println("5. Search magazines by genre");
+        System.out.println("6. Borrow magazine");
+        System.out.println("7. Return magazine");
+        System.out.println("8. Show issue information");
+        System.out.println("9. Back to Main Menu ");
+        System.out.println("Please Enter your choice...");
         scanner.nextLine();
+
+        int choice =getChoice();
+        logger.debug("User selected magazine menu option: "+ choice);
+        switch (choice) {
+            case 1:
+                viewAllMagazines();
+                break;
+            case 2:
+                //viewAvailableMagazines();
+                break;
+            case 3:
+               // searchMagazinesByTitle();
+                break;
+            case 4:
+               // searchMagazinesByPublisher();
+                break;
+            case 5:
+                //searchMagazinesByGenre();
+                break;
+            case 6:
+                //borrowSpecificMagazine();
+                break;
+            case 7:
+                //returnSpecificMagazine();
+                break;
+            case 8:
+                //showIssueInformation();
+                break;
+            case 9:
+                inMagazineMenu = false;
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
+        }
+
+
 
         // TODO: Students should implement magazine-specific functionality here
         // Similar structure to bookMenu() but for Magazine objects
         // Should handle Magazine-specific fields like issue number and publication date
     }
-
+    private void viewAllMagazines() {
+        List<Magazine>magazines = library.getAllMagazines();
+        if(magazines.isEmpty()){
+            System.out.println(" No magazines in the library");
+            return;
+        }
+        System.out.println("\n===All Magazines===");
+        for (Magazine magazine : magazines){
+            System.out.println(magazine);
+        }
+    }
     // BOOK-SPECIFIC METHODS (Fully implemented as reference)
     private void viewAllBooks() {
         List<Book> books = library.getAllBooks();

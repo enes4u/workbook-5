@@ -74,7 +74,15 @@ public class Library {
         }
         return books;
     }
-
+    public List<Magazine> getAllMagazines() {
+        List<Magazine> magazines = new ArrayList<>();
+        for (Item item : items.values()) {
+            if (item instanceof Magazine) {
+                magazines.add((Magazine) item);
+            }
+        }
+        return magazines;
+    }
     public List<Book> getAvailableBooks() {
         List<Book> availableBooks = new ArrayList<>();
         for (Item item : items.values()) {
