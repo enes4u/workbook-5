@@ -9,7 +9,7 @@ public class Cash extends Asset {
     // Implement getValue() (no custom logic needed)
     @Override
     public double getValue() {
-        return getOriginalCost();
+        return this.getOriginalCost();
     }
 
 }
